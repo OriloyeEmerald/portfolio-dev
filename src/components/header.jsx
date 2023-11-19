@@ -2,7 +2,7 @@ import React from 'react'
 import oval1 from '../assets/images/Oval1.svg'
 import oval2 from '../assets/images/Oval2.svg'
 import pfp from '../assets/images/pfp.png'
-import { SiGithub, SiInstagram, SiLinkedin, SiTwitter, SiX } from 'react-icons/si';
+import { SiGithub, SiInstagram, SiLinkedin, SiX } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 
@@ -34,7 +34,7 @@ const Header = () => {
                     </Link>
                 </li>
             </ul>
-            <img src={pfp} alt="" className='w-[100%] h-[30%] mx-auto fade-in-top' />
+            <img src={pfp} alt="" className='w-[100%] h-[40%] mx-auto fade-in-top' />
         </div>
         
        <div className='mt-[5rem] absolute top-[5rem] oval-div' style={{ filter: 'brightness(0.5) saturate(2) hue-rotate(180deg)' }}>
@@ -45,7 +45,7 @@ const Header = () => {
         <img src={oval1} alt="oval" className='absolute top-[-2rem]'/>
         
        </div>
-         <img src={oval2} alt="oval-2nd" className='mt-[.5rem] ml-auto absolute right-0 top-[20rem] w-[75px]' />
+         <img src={oval2} alt="oval-2nd" className='mt-[.5rem] ml-auto absolute right-0 top-[20rem] w-[65px]' />
         
         
     </div>

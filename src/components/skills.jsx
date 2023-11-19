@@ -12,27 +12,27 @@ const Skills = () => {
             <h3 className='text-[1.4rem]'>HTML</h3>
             <p className='text-[#d9d9d9]'>3 Years Experience</p>
          </div>
-         <div className='mt-[.8rem]'>
+         <div className='mt-[1rem]'>
             <h3 className='text-[1.4rem]'>CSS</h3>
             <p className='text-[#d9d9d9]'>3 Years Experience</p>
          </div>
-         <div className='mt-[.8rem]'>
+         <div className='mt-[1rem]'>
             <h3 className='text-[1.4rem]'>JAVASCRIPT</h3>
             <p className='text-[#d9d9d9]'>3 Years Experience</p>
          </div>
-         <div className='mt-[.8rem]'>
+         <div className='mt-[1rem]'>
             <h3  className='text-[1.4rem]'>REACT.JS</h3>
             <p className='text-[#d9d9d9]'>2 Years Experience</p>
          </div>
-         <div className='mt-[.8rem]'>
+         <div className='mt-[1rem]'>
             <h3 className='text-[1.4rem]'>TAILWINDCSS</h3>
             <p className='text-[#d9d9d9]'>2 Years Experience</p>
          </div>
-         <div className='mt-[.8rem]'>
+         <div className='mt-[1rem]'>
             <h3 className='text-[1.4rem]'>NEXTJS</h3>
             <p className='text-[#d9d9d9]'>&lt; 1 Year Experience</p>
          </div>
-         <div className='mt-[.8rem]'>
+         <div className='mt-[1rem]'>
             <h3 className='text-[1.4rem]'>TYPESCRIPT</h3>
             <p className='text-[#d9d9d9]'>&lt; 1 Year Experience</p>
          </div>

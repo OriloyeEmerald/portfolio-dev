@@ -1,8 +1,8 @@
 import port1 from './assets/images/port1.avif'
-import port2 from './assets/images/port2.avif'
+import port2 from './assets/images/proj6.avif'
 import port3 from './assets/images/port3.avif'
-import port4 from './assets/images/port4.avif'
-import port5 from './assets/images/port5.avif'
+import port4 from './assets/images/port7.avif.jpg'
+import port6 from './assets/images/port8.avif.jpg'
 
 
 const PROJECTS = [
@@ -44,7 +44,7 @@ const PROJECTS = [
 
   {
     id: 5,
-    image: port5,
+    image: port6,
     title: 'github users search app',
     stack: 'react, tailwindcss',
     live: 'https://oriloyeemerald.github.io/github-users-search-app/',

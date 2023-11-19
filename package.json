@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nodemailer": "^6.9.7",
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-router-dom": "^6.19.0"
+    "react-router-dom": "^6.19.0",
+    "react-scroll": "^1.9.0",
+    "react-scroll-trigger": "^0.6.14"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

@@ -1,45 +1,88 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SiGithub, SiInstagram, SiLinkedin, SiX } from 'react-icons/si';
 import oval1 from '../assets/images/Oval1.svg'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+      });
+    
+      const handleInputChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+          const response = await fetch('../api/sendEmail', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+          });
+    
+          if (response.ok) {
+            alert('Message sent successfully!');
+            setFormData({ name: '', email: '', message: '' });
+            console.log(response);
+          } else {
+            alert('Failed to send message. Please try again later.');
+            setFormData({ name: '', email: '', message: '' });
+          }
+        } catch (error) {
+          console.error('Error sending message:', error);
+          alert('An error occurred. Please try again later.');
+        }
+      };
+    
   return (
-    <div className='bg-[#242424]'>
+    <div className='bg-[#242424]' id='footer'>
         <div className='mt-[4rem] pt-[2rem]'>
         <h2 className='text-[2rem] pb-[.5rem]'>Contact</h2>
         <p className='text-[#d9d9d9] px-[.5rem]pt-[1rem]'>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
         </div>
 
-        <form action="" className='mx-[.5rem]'>
+        <form action="" className='mx-[.5rem]' onSubmit={handleSubmit}>
             <div className='border-b-[2px] py-2 mt-[2rem]'>
             <input 
             type="text"
-            placeholder='NAME' 
+            placeholder='name' 
+            name="name"
+            value={formData.name}
             aria-label='name'
-            className='appearance-none bg-transparent border-none w-full  mr-3 py-1 px-2 leading-tight focus:outline-none'/>
+            onChange={handleInputChange}
+            className='appearance-none bg-transparent border-none w-full  mr-3 py-1 px-2 leading-tight focus:outline-none placeholder:uppercase'/>
             </div>
 
             <div className='border-b-[2px] py-2 mt-[1rem]'>
             <input 
             type="email"
-            placeholder='EMAIL' 
+            placeholder='email'
+            name="email"
+            value={formData.email} 
             aria-label='email-address'
-            className='appearance-none bg-transparent border-none w-full  mr-3 py-[1rem] px-2 leading-tight focus:outline-none'/>
+            onChange={handleInputChange}
+            className='appearance-none bg-transparent border-none w-full  mr-3 py-[1rem] px-2 leading-tight focus:outline-none placeholder:uppercase'/>
             </div>
 
             <div className='border-b-[2px] pb-[4rem] mt-[1rem]'>
             <input 
             type="text"
-            placeholder='MESSAGE' 
+            placeholder='message' 
+            name="message"
+            value={formData.message}
             aria-label='message'
-            className='appearance-none bg-transparent border-none w-full  mr-3 py-[1rem] px-2 leading-tight focus:outline-none'/>
+            onChange={handleInputChange}
+            className='appearance-none bg-transparent border-none w-full  mr-3 py-[1rem] px-2 leading-tight focus:outline-none placeholder:uppercase'/>
             </div>
             
            
             <div className='mt-[3rem] justify-end text-right'>
-                      <p className='uppercase text-[1rem]'>send message</p>
-                      <div className='border-b-[3px] ml-auto border-[#4ee1a0] mt-[.3rem] w-[7.7rem]'></div>
+                      <button type='submit' className='uppercase text-[1rem]'>send message</button>
+                      <div className='border-b-[3px] ml-auto border-[#4ee1a0] mt-[.3rem] w-[7.4rem]'></div>
                     </div>
         </form>
         <div >
