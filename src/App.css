@@ -7,7 +7,7 @@
 }
 
 
-.fade-in-top {
+/* .fade-in-top {
 	-webkit-animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in-top 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -70,4 +70,4 @@
             filter: blur(0px);
     opacity: 1;
   }
-}
+} */

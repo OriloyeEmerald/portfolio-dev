@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-scroll';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 
 const About = () => {
-
+  useEffect(() => {
+    Aos.init({duration: 1000});
+ }, [])
   
   return (
-    <div className='sm:absolute sm:top-[13.2rem] sm:left-0 lg:left-[13.5rem] sm:z-40 sm:text-left'>
+    <div className='sm:absolute sm:top-[13.2rem] sm:left-0 lg:left-[13.5rem] sm:z-40 sm:text-left ' data-aos = "fade-right">
 
      <div className='px-[.5rem]'>
         <h2 className='text-[2rem] focus-in-expand sm:text-[2.9rem] sm:w-[500px] lg:w-[800px] lg:text-[3.6rem]'>Nice to meet you! I'm <span className='border-b-[4.5px] border-[#4ee1a0]'>Emmanuel Balogun</span>.</h2>
