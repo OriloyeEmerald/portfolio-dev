@@ -18,7 +18,7 @@ const PROJECTS = [
   {
     id: 2,
     image: port2,
-    title: 'countries-finder web app',
+    title: 'countries-finder app',
     stack: 'html, css, javascript',
     live: 'https://oriloyeemerald.github.io/Country-finder/',
     code: 'https://github.com/OriloyeEmerald/Country-finder',

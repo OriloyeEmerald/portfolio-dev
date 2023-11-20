@@ -35,6 +35,7 @@ const Footer = () => {
         } catch (error) {
           console.error('Error sending message:', error);
           alert('An error occurred. Please try again later.');
+          setFormData({ name: '', email: '', message: '' });
         }
       };
     
@@ -96,9 +97,9 @@ const Footer = () => {
         </div>
         <div className='border-b-[1.5px] border-[#fff] mt-[4rem] mx-[.5rem] mx-[.5rem] z-20'></div>
        
-        <div className='pb-[2rem]'>
-            <p className='mt-[3rem] text-[1.4rem] '>emeraldthedev</p>
-            <ul className='flex justify-center gap-[2rem] mt-[1rem] text-[1.3rem]'>
+        <div className='pb-[2rem] sm:flex  sm:items-center sm:justify-between sm:mt-[4rem] sm:px-[.5rem]'>
+            <p className='mt-[3rem] sm:mt-0 text-[1.4rem] '>emeraldthedev</p>
+            <ul className='flex justify-center gap-[2rem] mt-[1rem] sm:mt-0 text-[1.3rem]'>
             <li>
                     <Link to={'https://github.com/OriloyeEmerald'}>
                       <SiGithub />

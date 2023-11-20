@@ -16,7 +16,7 @@ const Projects = () => {
          </ScrollLink>
         </div>
   
-        <div className='mt-[2rem]'>
+        <div className='mt-[2rem] grid grid-cols-1 sm:grid-cols-2 gap-8'>
           {PROJECTS.map((project) => (
             <div key={project.id} className='mb-[3.5rem] uppercase text-left'>
               <img src={project.image} alt="" className='h-[300px] w-full rounded-[.2rem] shadow-lg'/>
