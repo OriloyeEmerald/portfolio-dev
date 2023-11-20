@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <div className='relative'>
         
-        <div style={{background: 'linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0.65%, #242424 100%)', backgroundSize: 'contain',}}className='mx-[4rem] relative z-30 mb-[2rem] sm:mr-auto sm:ml-[16rem] lg:ml-[38rem]' data-aos = "fade-left">
+        <div style={{background: 'linear-gradient(180deg, rgba(36, 36, 36, 0.00) 0.65%, #242424 100%)', backgroundSize: 'contain',}}className='mx-[4rem] relative z-30 mb-[2rem] sm:mr-auto sm:ml-[16rem] lg:ml-[38rem]' >
             <div className='sm:flex sm:items-center sm:justify-between'>
             <p className='mt-[1rem] text-[1.4rem] sm:absolute sm:left-[-15.5rem] lg:left-[-37.5rem]'>emeraldthedev</p>
             <ul className='flex justify-center gap-[2rem] mt-[1rem] text-[1.3rem] sm:ml-auto sm:mr-[.5rem]'>
@@ -42,7 +42,7 @@ const Header = () => {
                 </li>
             </ul>
             </div>
-            <img src={pfp} alt="" className='w-[100%] h-[40%] mx-auto sm:h-[650px]' />
+            <img src={pfp} alt="" className='w-[100%] h-[40%] mx-auto sm:h-[650px]' data-aos = "fade-left"/>
         </div>
         
        <div className='mt-[5rem] absolute top-[5rem] oval-div' style={{ filter: 'brightness(0.5) saturate(2) hue-rotate(180deg)' }}>

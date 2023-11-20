@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PROJECTS from '../projectsDet';
 import { Link as RouterLink} from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Projects = () => {
+  useEffect(() => {
+    Aos.init({duration: 2000});
+ }, [])
+
     return (
       <div className='mx-[1rem]'>
         <div className='flex items-center justify-between'>
@@ -18,7 +24,7 @@ const Projects = () => {
   
         <div className='mt-[2rem] grid grid-cols-1 sm:grid-cols-2 gap-8'>
           {PROJECTS.map((project) => (
-            <div key={project.id} className='mb-[3.5rem] uppercase text-left'>
+            <div key={project.id} className='mb-[3.5rem] uppercase text-left' data-aos='fade-down'>
               <img src={project.image} alt="" className='h-[300px] w-full rounded-[.2rem] shadow-lg'/>
               <p className='mt-[1rem] text-[1.3rem]'>{project.title}</p>
               <p className='text-[#d9d9d9] mt-[.5rem] text-[.9rem]'>{project.stack}</p>

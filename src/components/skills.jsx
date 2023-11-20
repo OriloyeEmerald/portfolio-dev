@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import oval1 from '../assets/images/Oval1.svg';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Skills = () => {
+   useEffect(() => {
+      Aos.init({duration: 2000});
+   }, [])
+
   return (
-    <div className=''>
+    <div className='' data-aos = 'flip-left'>
       <div className='border-b-[2px] border-[#fff] mt-[4rem] mx-[.5rem]'></div>
 
       <div className='mt-[1rem] grid sm:grid-cols-2 gap-4 lg:grid-cols-3'>

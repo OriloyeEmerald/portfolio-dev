@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SiGithub, SiInstagram, SiLinkedin, SiX } from 'react-icons/si';
 import oval1 from '../assets/images/Oval1.svg'
 import { Link } from 'react-router-dom';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Footer = () => {
+    useEffect(() => {
+        Aos.init({duration: 2000});
+     }, [])
+
 
     const [formData, setFormData] = useState({
         name: '',
@@ -40,7 +46,7 @@ const Footer = () => {
       };
     
   return (
-    <div className='bg-[#242424]' id='footer'>
+    <div className='bg-[#242424]' id='footer' data-aos = 'flip-left'>
         <div className='mt-[4rem] pt-[2rem]'>
         <h2 className='text-[2rem] pb-[.5rem]'>Contact</h2>
         <p className='text-[#d9d9d9] px-[.5rem]pt-[1rem]'>I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
